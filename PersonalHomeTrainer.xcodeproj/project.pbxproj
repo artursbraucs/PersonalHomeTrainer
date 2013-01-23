@@ -27,7 +27,6 @@
 		510649581691F09A00D75337 /* ExerciseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510649571691F09900D75337 /* ExerciseDataController.m */; };
 		516BCDC416AAE4F800DF662E /* ExerciseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCDC316AAE4F800DF662E /* ExerciseDetailViewController.m */; };
 		516BCDC616AAED0000DF662E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516BCDC516AAED0000DF662E /* MediaPlayer.framework */; };
-		516BCDC816AAEFFB00DF662E /* big-buck-bunny-clip.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 516BCDC716AAEFFA00DF662E /* big-buck-bunny-clip.m4v */; };
 		516BCE0116AAF32F00DF662E /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCDFE16AAF32F00DF662E /* LBYouTubeExtractor.m */; };
 		516BCE0216AAF32F00DF662E /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCE0016AAF32F00DF662E /* LBYouTubePlayerController.m */; };
 		7449776616A98C6E007B247A /* ExercicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776516A98C6E007B247A /* ExercicesTableViewController.m */; };
@@ -65,7 +64,6 @@
 		516BCDC216AAE4F800DF662E /* ExerciseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDetailViewController.h; sourceTree = "<group>"; };
 		516BCDC316AAE4F800DF662E /* ExerciseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailViewController.m; sourceTree = "<group>"; };
 		516BCDC516AAED0000DF662E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		516BCDC716AAEFFA00DF662E /* big-buck-bunny-clip.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "big-buck-bunny-clip.m4v"; sourceTree = "<group>"; };
 		516BCDFC16AAF32F00DF662E /* LBYouTube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTube.h; sourceTree = "<group>"; };
 		516BCDFD16AAF32F00DF662E /* LBYouTubeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubeExtractor.h; sourceTree = "<group>"; };
 		516BCDFE16AAF32F00DF662E /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 		51064913168DC96400D75337 /* PersonalHomeTrainer */ = {
 			isa = PBXGroup;
 			children = (
-				516BCDC716AAEFFA00DF662E /* big-buck-bunny-clip.m4v */,
 				5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */,
 				5106493E168DD53C00D75337 /* WorkoutViewController.h */,
 				5106493F168DD53C00D75337 /* WorkoutViewController.m */,
@@ -239,7 +236,6 @@
 				5106492E168DC96400D75337 /* first@2x.png in Resources */,
 				51064933168DC96400D75337 /* second.png in Resources */,
 				51064935168DC96400D75337 /* second@2x.png in Resources */,
-				516BCDC816AAEFFB00DF662E /* big-buck-bunny-clip.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
