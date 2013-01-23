@@ -1,5 +1,5 @@
 //
-//  TrainerSecondViewController.h
+//  TrainerWorkoutViewController.h
 //  PersonalHomeTrainer
 //
 //  Created by Artūrs Braučs on 12/28/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrainerSecondViewController : UIViewController
+@interface WorkoutViewController : UIViewController <UITextFieldDelegate>
 
 @end

@@ -1,5 +1,5 @@
 //
-//  TrainerFirstViewController.h
+//  TrainerProfileViewController.h
 //  PersonalHomeTrainer
 //
 //  Created by Artūrs Braučs on 12/28/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrainerFirstViewController : UIViewController
+@interface ProfileViewController : UIViewController
 
 @end
