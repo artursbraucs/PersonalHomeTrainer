@@ -31,6 +31,8 @@
 		516BCE0216AAF32F00DF662E /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCE0016AAF32F00DF662E /* LBYouTubePlayerController.m */; };
 		7449776616A98C6E007B247A /* ExercicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776516A98C6E007B247A /* ExercicesTableViewController.m */; };
 		7449776A16A99329007B247A /* TrainerAddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776916A99329007B247A /* TrainerAddExerciseTableViewController.m */; };
+		74CD360B16B147750037B56D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CD360A16B147750037B56D /* CoreData.framework */; };
+		74CD367F16B14C0D0037B56D /* PersonalHomeTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74CD367B16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		7449776516A98C6E007B247A /* ExercicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercicesTableViewController.m; sourceTree = "<group>"; };
 		7449776816A99329007B247A /* TrainerAddExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainerAddExerciseTableViewController.h; sourceTree = "<group>"; };
 		7449776916A99329007B247A /* TrainerAddExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainerAddExerciseTableViewController.m; sourceTree = "<group>"; };
+		74CD360A16B147750037B56D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		74CD367C16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalHomeTrainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				5106490E168DC96400D75337 /* UIKit.framework in Frameworks */,
 				51064910168DC96400D75337 /* Foundation.framework in Frameworks */,
 				51064912168DC96400D75337 /* CoreGraphics.framework in Frameworks */,
+				74CD360B16B147750037B56D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				516BCDFB16AAF32E00DF662E /* LBYouTubeView */,
-				516BCDC516AAED0000DF662E /* MediaPlayer.framework */,
 				51064913168DC96400D75337 /* PersonalHomeTrainer */,
 				5106490C168DC96400D75337 /* Frameworks */,
 				5106490A168DC96400D75337 /* Products */,
@@ -112,6 +116,8 @@
 		5106490C168DC96400D75337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74CD360A16B147750037B56D /* CoreData.framework */,
+				516BCDC516AAED0000DF662E /* MediaPlayer.framework */,
 				5106490D168DC96400D75337 /* UIKit.framework */,
 				5106490F168DC96400D75337 /* Foundation.framework */,
 				51064911168DC96400D75337 /* CoreGraphics.framework */,
@@ -122,6 +128,7 @@
 		51064913168DC96400D75337 /* PersonalHomeTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				74CD367B16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodeld */,
 				5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */,
 				5106493E168DD53C00D75337 /* WorkoutViewController.h */,
 				5106493F168DD53C00D75337 /* WorkoutViewController.m */,
@@ -257,6 +264,7 @@
 				516BCDC416AAE4F800DF662E /* ExerciseDetailViewController.m in Sources */,
 				516BCE0116AAF32F00DF662E /* LBYouTubeExtractor.m in Sources */,
 				516BCE0216AAF32F00DF662E /* LBYouTubePlayerController.m in Sources */,
+				74CD367F16B14C0D0037B56D /* PersonalHomeTrainer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +384,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		74CD367B16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				74CD367C16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodel */,
+			);
+			currentVersion = 74CD367C16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodel */;
+			path = PersonalHomeTrainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 51064900168DC96400D75337 /* Project object */;
 }
