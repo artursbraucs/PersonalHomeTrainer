@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) ExerciseDataController *dataController;
 
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 - (IBAction)done:(UIStoryboardSegue *)segue;
 - (IBAction)cancel:(UIStoryboardSegue *)segue;
 

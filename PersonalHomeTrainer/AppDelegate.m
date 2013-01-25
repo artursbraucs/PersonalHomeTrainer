@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Artūrs Braučs. All rights reserved.
 //
 
-#import "TrainerAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation TrainerAppDelegate
+@implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -16,6 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UITabBarController *tab = (UITabBarController *) self.window.rootViewController;
+    UINavigationController *nav = (UINavigationController *)[[tab viewControllers]objectAtIndex:0];
+    WorkoutViewController *wvc = (WorkoutViewController *)[[nav viewControllers]objectAtIndex:0];
+    wvc.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 

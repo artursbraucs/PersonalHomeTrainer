@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExercicesTableViewController.h"
+#import "WorkoutViewController.h"
 
-@interface TrainerAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

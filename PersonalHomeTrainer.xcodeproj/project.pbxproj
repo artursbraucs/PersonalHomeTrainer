@@ -12,7 +12,7 @@
 		51064912168DC96400D75337 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51064911168DC96400D75337 /* CoreGraphics.framework */; };
 		51064918168DC96400D75337 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51064916168DC96400D75337 /* InfoPlist.strings */; };
 		5106491A168DC96400D75337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51064919168DC96400D75337 /* main.m */; };
-		5106491E168DC96400D75337 /* TrainerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5106491D168DC96400D75337 /* TrainerAppDelegate.m */; };
+		5106491E168DC96400D75337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5106491D168DC96400D75337 /* AppDelegate.m */; };
 		51064920168DC96400D75337 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5106491F168DC96400D75337 /* Default.png */; };
 		51064922168DC96400D75337 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51064921168DC96400D75337 /* Default@2x.png */; };
 		51064924168DC96400D75337 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51064923168DC96400D75337 /* Default-568h@2x.png */; };
@@ -44,8 +44,8 @@
 		51064917168DC96400D75337 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		51064919168DC96400D75337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5106491B168DC96400D75337 /* PersonalHomeTrainer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonalHomeTrainer-Prefix.pch"; sourceTree = "<group>"; };
-		5106491C168DC96400D75337 /* TrainerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainerAppDelegate.h; sourceTree = "<group>"; };
-		5106491D168DC96400D75337 /* TrainerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainerAppDelegate.m; sourceTree = "<group>"; };
+		5106491C168DC96400D75337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5106491D168DC96400D75337 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5106491F168DC96400D75337 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		51064921168DC96400D75337 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		51064923168DC96400D75337 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 				5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */,
 				5106493E168DD53C00D75337 /* WorkoutViewController.h */,
 				5106493F168DD53C00D75337 /* WorkoutViewController.m */,
-				5106491C168DC96400D75337 /* TrainerAppDelegate.h */,
-				5106491D168DC96400D75337 /* TrainerAppDelegate.m */,
+				5106491C168DC96400D75337 /* AppDelegate.h */,
+				5106491D168DC96400D75337 /* AppDelegate.m */,
 				51064925168DC96400D75337 /* MainStoryboard.storyboard */,
 				516BCDC216AAE4F800DF662E /* ExerciseDetailViewController.h */,
 				516BCDC316AAE4F800DF662E /* ExerciseDetailViewController.m */,
@@ -254,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5106491A168DC96400D75337 /* main.m in Sources */,
-				5106491E168DC96400D75337 /* TrainerAppDelegate.m in Sources */,
+				5106491E168DC96400D75337 /* AppDelegate.m in Sources */,
 				51064940168DD53C00D75337 /* WorkoutViewController.m in Sources */,
 				51064948168DE9A500D75337 /* ProfileViewController.m in Sources */,
 				510649551691EAB100D75337 /* Exercise.m in Sources */,
