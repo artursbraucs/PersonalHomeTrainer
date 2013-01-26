@@ -29,10 +29,10 @@
 		516BCDC616AAED0000DF662E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516BCDC516AAED0000DF662E /* MediaPlayer.framework */; };
 		516BCE0116AAF32F00DF662E /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCDFE16AAF32F00DF662E /* LBYouTubeExtractor.m */; };
 		516BCE0216AAF32F00DF662E /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCE0016AAF32F00DF662E /* LBYouTubePlayerController.m */; };
+		51E90E7716B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51E90E7516B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld */; };
 		7449776616A98C6E007B247A /* ExercicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776516A98C6E007B247A /* ExercicesTableViewController.m */; };
-		7449776A16A99329007B247A /* TrainerAddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776916A99329007B247A /* TrainerAddExerciseTableViewController.m */; };
+		7449776A16A99329007B247A /* AddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776916A99329007B247A /* AddExerciseTableViewController.m */; };
 		74CD360B16B147750037B56D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CD360A16B147750037B56D /* CoreData.framework */; };
-		74CD367F16B14C0D0037B56D /* PersonalHomeTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74CD367B16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,12 +71,12 @@
 		516BCDFE16AAF32F00DF662E /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
 		516BCDFF16AAF32F00DF662E /* LBYouTubePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerController.h; sourceTree = "<group>"; };
 		516BCE0016AAF32F00DF662E /* LBYouTubePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerController.m; sourceTree = "<group>"; };
+		51E90E7616B3F36800BD377A /* CoreDataTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTemplate.xcdatamodel; sourceTree = "<group>"; };
 		7449776416A98C6E007B247A /* ExercicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercicesTableViewController.h; sourceTree = "<group>"; };
 		7449776516A98C6E007B247A /* ExercicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercicesTableViewController.m; sourceTree = "<group>"; };
-		7449776816A99329007B247A /* TrainerAddExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainerAddExerciseTableViewController.h; sourceTree = "<group>"; };
-		7449776916A99329007B247A /* TrainerAddExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainerAddExerciseTableViewController.m; sourceTree = "<group>"; };
+		7449776816A99329007B247A /* AddExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseTableViewController.h; sourceTree = "<group>"; };
+		7449776916A99329007B247A /* AddExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseTableViewController.m; sourceTree = "<group>"; };
 		74CD360A16B147750037B56D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		74CD367C16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalHomeTrainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 		51064913168DC96400D75337 /* PersonalHomeTrainer */ = {
 			isa = PBXGroup;
 			children = (
-				74CD367B16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodeld */,
+				51E90E7516B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld */,
 				5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */,
 				5106493E168DD53C00D75337 /* WorkoutViewController.h */,
 				5106493F168DD53C00D75337 /* WorkoutViewController.m */,
@@ -150,8 +150,8 @@
 				510649541691EAB100D75337 /* Exercise.m */,
 				7449776416A98C6E007B247A /* ExercicesTableViewController.h */,
 				7449776516A98C6E007B247A /* ExercicesTableViewController.m */,
-				7449776816A99329007B247A /* TrainerAddExerciseTableViewController.h */,
-				7449776916A99329007B247A /* TrainerAddExerciseTableViewController.m */,
+				7449776816A99329007B247A /* AddExerciseTableViewController.h */,
+				7449776916A99329007B247A /* AddExerciseTableViewController.m */,
 			);
 			path = PersonalHomeTrainer;
 			sourceTree = "<group>";
@@ -260,11 +260,11 @@
 				510649551691EAB100D75337 /* Exercise.m in Sources */,
 				510649581691F09A00D75337 /* ExerciseDataController.m in Sources */,
 				7449776616A98C6E007B247A /* ExercicesTableViewController.m in Sources */,
-				7449776A16A99329007B247A /* TrainerAddExerciseTableViewController.m in Sources */,
+				7449776A16A99329007B247A /* AddExerciseTableViewController.m in Sources */,
 				516BCDC416AAE4F800DF662E /* ExerciseDetailViewController.m in Sources */,
 				516BCE0116AAF32F00DF662E /* LBYouTubeExtractor.m in Sources */,
 				516BCE0216AAF32F00DF662E /* LBYouTubePlayerController.m in Sources */,
-				74CD367F16B14C0D0037B56D /* PersonalHomeTrainer.xcdatamodeld in Sources */,
+				51E90E7716B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,12 +386,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		74CD367B16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodeld */ = {
+		51E90E7516B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				74CD367C16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodel */,
+				51E90E7616B3F36800BD377A /* CoreDataTemplate.xcdatamodel */,
 			);
-			currentVersion = 74CD367C16B14C0C0037B56D /* PersonalHomeTrainer.xcdatamodel */;
+			currentVersion = 51E90E7616B3F36800BD377A /* CoreDataTemplate.xcdatamodel */;
 			path = PersonalHomeTrainer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -9,7 +9,7 @@
 #import "ExercicesTableViewController.h"
 #import "Exercise.h"
 #import "ExerciseDataController.h"
-#import "TrainerAddExerciseTableViewController.h"
+#import "AddExerciseTableViewController.h"
 #import "ExerciseDetailViewController.h"
 
 @interface ExercicesTableViewController ()
@@ -36,6 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -135,7 +136,7 @@
 - (void)done:(UIStoryboardSegue *)segue
 {
     if ([[segue identifier]isEqualToString:@"SaveExercise"]) {
-        TrainerAddExerciseTableViewController *addController = [segue sourceViewController];
+        AddExerciseTableViewController *addController = [segue sourceViewController];
         if (addController.trainerExercise) {
             [self.dataController addTrainerExerciseWithExcercise:addController.trainerExercise];
             [[self tableView] reloadData];

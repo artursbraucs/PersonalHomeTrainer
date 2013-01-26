@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class Exercise;
 
-@interface TrainerAddExerciseTableViewController : UITableViewController <UITextFieldDelegate>
+@interface AddExerciseTableViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameInput;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionInput;

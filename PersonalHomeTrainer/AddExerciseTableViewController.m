@@ -6,19 +6,20 @@
 //  Copyright (c) 2013. g. Artūrs Braučs. All rights reserved.
 //
 
-#import "TrainerAddExerciseTableViewController.h"
+#import "AddExerciseTableViewController.h"
 
 #import "Exercise.h"
 
-@interface TrainerAddExerciseTableViewController ()
+@interface AddExerciseTableViewController ()
 
 @end
 
-@implementation TrainerAddExerciseTableViewController
+@implementation AddExerciseTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning
