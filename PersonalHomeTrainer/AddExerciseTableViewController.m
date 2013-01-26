@@ -8,7 +8,7 @@
 
 #import "AddExerciseTableViewController.h"
 
-#import "Exercise.h"
+#import "OldExercise.h"
 
 @interface AddExerciseTableViewController ()
 
@@ -38,9 +38,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"SaveExercise"]) {
         if ([self.nameInput.text length] || [self.descriptionInput.text length]) {
-            Exercise *exercise;
+            OldExercise *exercise;
             NSDate *today = [NSDate date];
-            exercise = [[Exercise alloc] initWithName:self.nameInput.text description:self.descriptionInput.text videoPath:self.videoPathInput.text date:today];
+            exercise = [[OldExercise alloc] initWithName:self.nameInput.text description:self.descriptionInput.text videoPath:self.videoPathInput.text date:today];
             self.trainerExercise = exercise;
         }
     }

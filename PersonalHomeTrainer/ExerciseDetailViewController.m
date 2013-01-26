@@ -7,7 +7,7 @@
 //
 
 #import "ExerciseDetailViewController.h"
-#import "Exercise.h"
+#import "OldExercise.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "LBYouTube.h"
 
@@ -46,7 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setExercise:(Exercise *)exercise
+- (void)setExercise:(OldExercise *)exercise
 {
     if (_exercise != exercise) {
         _exercise = exercise;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Exercise;
+@class OldExercise;
 
 @interface AddExerciseTableViewController : UITableViewController <UITextFieldDelegate>
 
@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *descriptionInput;
 @property (weak, nonatomic) IBOutlet UITextField *videoPathInput;
 
-@property (strong, nonatomic) Exercise *trainerExercise;
+@property (strong, nonatomic) OldExercise *trainerExercise;
 
 @end

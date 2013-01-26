@@ -23,8 +23,9 @@
 		51064935168DC96400D75337 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51064934168DC96400D75337 /* second@2x.png */; };
 		51064940168DD53C00D75337 /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5106493F168DD53C00D75337 /* WorkoutViewController.m */; };
 		51064948168DE9A500D75337 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51064947168DE9A500D75337 /* ProfileViewController.m */; };
-		510649551691EAB100D75337 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 510649541691EAB100D75337 /* Exercise.m */; };
+		510649551691EAB100D75337 /* OldExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 510649541691EAB100D75337 /* OldExercise.m */; };
 		510649581691F09A00D75337 /* ExerciseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510649571691F09900D75337 /* ExerciseDataController.m */; };
+		5110784416B4271E00A678ED /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110784316B4271E00A678ED /* Exercise.m */; };
 		516BCDC416AAE4F800DF662E /* ExerciseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCDC316AAE4F800DF662E /* ExerciseDetailViewController.m */; };
 		516BCDC616AAED0000DF662E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516BCDC516AAED0000DF662E /* MediaPlayer.framework */; };
 		516BCE0116AAF32F00DF662E /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 516BCDFE16AAF32F00DF662E /* LBYouTubeExtractor.m */; };
@@ -59,10 +60,12 @@
 		51064946168DE9A500D75337 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		51064947168DE9A500D75337 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PersonalHomeTrainer.entitlements; sourceTree = "<group>"; };
-		510649531691EAB100D75337 /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
-		510649541691EAB100D75337 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		510649531691EAB100D75337 /* OldExercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldExercise.h; sourceTree = "<group>"; };
+		510649541691EAB100D75337 /* OldExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldExercise.m; sourceTree = "<group>"; };
 		510649561691F09900D75337 /* ExerciseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDataController.h; sourceTree = "<group>"; };
 		510649571691F09900D75337 /* ExerciseDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDataController.m; sourceTree = "<group>"; };
+		5110784216B4271E00A678ED /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		5110784316B4271E00A678ED /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		516BCDC216AAE4F800DF662E /* ExerciseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDetailViewController.h; sourceTree = "<group>"; };
 		516BCDC316AAE4F800DF662E /* ExerciseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailViewController.m; sourceTree = "<group>"; };
 		516BCDC516AAED0000DF662E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -128,30 +131,32 @@
 		51064913168DC96400D75337 /* PersonalHomeTrainer */ = {
 			isa = PBXGroup;
 			children = (
-				51E90E7516B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld */,
-				5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */,
-				5106493E168DD53C00D75337 /* WorkoutViewController.h */,
-				5106493F168DD53C00D75337 /* WorkoutViewController.m */,
+				7449776816A99329007B247A /* AddExerciseTableViewController.h */,
+				7449776916A99329007B247A /* AddExerciseTableViewController.m */,
 				5106491C168DC96400D75337 /* AppDelegate.h */,
 				5106491D168DC96400D75337 /* AppDelegate.m */,
-				51064925168DC96400D75337 /* MainStoryboard.storyboard */,
+				7449776416A98C6E007B247A /* ExercicesTableViewController.h */,
+				7449776516A98C6E007B247A /* ExercicesTableViewController.m */,
+				5110784216B4271E00A678ED /* Exercise.h */,
+				5110784316B4271E00A678ED /* Exercise.m */,
+				510649561691F09900D75337 /* ExerciseDataController.h */,
+				510649571691F09900D75337 /* ExerciseDataController.m */,
 				516BCDC216AAE4F800DF662E /* ExerciseDetailViewController.h */,
 				516BCDC316AAE4F800DF662E /* ExerciseDetailViewController.m */,
 				5106492B168DC96400D75337 /* first.png */,
 				5106492D168DC96400D75337 /* first@2x.png */,
+				51064925168DC96400D75337 /* MainStoryboard.storyboard */,
+				510649531691EAB100D75337 /* OldExercise.h */,
+				510649541691EAB100D75337 /* OldExercise.m */,
+				5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */,
+				51E90E7516B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld */,
 				51064946168DE9A500D75337 /* ProfileViewController.h */,
 				51064947168DE9A500D75337 /* ProfileViewController.m */,
 				51064932168DC96400D75337 /* second.png */,
 				51064934168DC96400D75337 /* second@2x.png */,
 				51064914168DC96400D75337 /* Supporting Files */,
-				510649531691EAB100D75337 /* Exercise.h */,
-				510649561691F09900D75337 /* ExerciseDataController.h */,
-				510649571691F09900D75337 /* ExerciseDataController.m */,
-				510649541691EAB100D75337 /* Exercise.m */,
-				7449776416A98C6E007B247A /* ExercicesTableViewController.h */,
-				7449776516A98C6E007B247A /* ExercicesTableViewController.m */,
-				7449776816A99329007B247A /* AddExerciseTableViewController.h */,
-				7449776916A99329007B247A /* AddExerciseTableViewController.m */,
+				5106493E168DD53C00D75337 /* WorkoutViewController.h */,
+				5106493F168DD53C00D75337 /* WorkoutViewController.m */,
 			);
 			path = PersonalHomeTrainer;
 			sourceTree = "<group>";
@@ -257,7 +262,7 @@
 				5106491E168DC96400D75337 /* AppDelegate.m in Sources */,
 				51064940168DD53C00D75337 /* WorkoutViewController.m in Sources */,
 				51064948168DE9A500D75337 /* ProfileViewController.m in Sources */,
-				510649551691EAB100D75337 /* Exercise.m in Sources */,
+				510649551691EAB100D75337 /* OldExercise.m in Sources */,
 				510649581691F09A00D75337 /* ExerciseDataController.m in Sources */,
 				7449776616A98C6E007B247A /* ExercicesTableViewController.m in Sources */,
 				7449776A16A99329007B247A /* AddExerciseTableViewController.m in Sources */,
@@ -265,6 +270,7 @@
 				516BCE0116AAF32F00DF662E /* LBYouTubeExtractor.m in Sources */,
 				516BCE0216AAF32F00DF662E /* LBYouTubePlayerController.m in Sources */,
 				51E90E7716B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld in Sources */,
+				5110784416B4271E00A678ED /* Exercise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

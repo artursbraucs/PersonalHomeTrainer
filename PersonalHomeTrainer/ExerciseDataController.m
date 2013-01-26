@@ -7,7 +7,7 @@
 //
 
 #import "ExerciseDataController.h"
-#import "Exercise.h"
+#import "OldExercise.h"
 
 @interface ExerciseDataController ()
 - (void)initializeDefaultDataList;
@@ -26,14 +26,14 @@
 - (void)initializeDefaultDataList {
     NSMutableArray *exerciseList = [[NSMutableArray alloc] init];
     self.masterTrainerExerciseList = exerciseList;
-    Exercise *exercise;
+    OldExercise *exercise;
     NSDate *today = [NSDate date];
-    exercise = [[Exercise alloc] initWithName:@"Pushup" description:@"Push up is the chest exercise ideal for make easy and quick chest workout to do at home. If you want know how to push up, just see the video instructions, training your pectoralis major and pectoralis minor with best upper pec exercise and add it in your chest workout." videoPath:@"http://www.youtube.com/watch?v=A6Q7wsAV4OY" date:today];
+    exercise = [[OldExercise alloc] initWithName:@"Pushup" description:@"Push up is the chest exercise ideal for make easy and quick chest workout to do at home. If you want know how to push up, just see the video instructions, training your pectoralis major and pectoralis minor with best upper pec exercise and add it in your chest workout." videoPath:@"http://www.youtube.com/watch?v=A6Q7wsAV4OY" date:today];
     [self addTrainerExerciseWithExcercise:exercise];
     
-    Exercise *exercise2;
+    OldExercise *exercise2;
 
-    exercise2 = [[Exercise alloc] initWithName:@"ABS" description:@"Alternating beat is an effective exercise for lower abs. You can perform this exercise at home or in gym, just remember to keep legs off the ground so your lower abs muscles will be tense during the exercise." videoPath:@"http://www.youtube.com/watch?v=wq45EYyH02w" date:today];
+    exercise2 = [[OldExercise alloc] initWithName:@"ABS" description:@"Alternating beat is an effective exercise for lower abs. You can perform this exercise at home or in gym, just remember to keep legs off the ground so your lower abs muscles will be tense during the exercise." videoPath:@"http://www.youtube.com/watch?v=wq45EYyH02w" date:today];
     [self addTrainerExerciseWithExcercise:exercise2];
 
 }
@@ -48,11 +48,11 @@
     return [self.masterTrainerExerciseList count];
 }
 
-- (Exercise *)objectInListAtIndex:(NSUInteger)theIndex {
+- (OldExercise *)objectInListAtIndex:(NSUInteger)theIndex {
     return [self.masterTrainerExerciseList objectAtIndex:theIndex];
 }
 
-- (void)addTrainerExerciseWithExcercise:(Exercise *)exercise {
+- (void)addTrainerExerciseWithExcercise:(OldExercise *)exercise {
     [self.masterTrainerExerciseList addObject:exercise];
 }
 
