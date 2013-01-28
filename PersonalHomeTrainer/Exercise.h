@@ -1,19 +1,22 @@
 //
-//  TrainerExercise.h
+//  Exercise.h
 //  PersonalHomeTrainer
 //
-//  Created by Artūrs Braučs on 12/31/12.
-//  Copyright (c) 2012 Artūrs Braučs. All rights reserved.
+//  Created by Artūrs Braučs on 1/26/13.
+//  Copyright (c) 2013 Artūrs Braučs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Exercise : NSObject
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *description;
-@property (nonatomic, copy) NSString *videoPath;
-@property (nonatomic, strong) NSDate *date;
+@interface Exercise : NSManagedObject
 
--(id) initWithName:(NSString *)name description:(NSString *)description videoPath:(NSString *)videoPath date:(NSDate *)date;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * type;
+@property (nonatomic, retain) NSString * descriptions;
+@property (nonatomic, retain) NSString * videoPath;
+@property (nonatomic, retain) NSDate * createdAt;
+
+
 @end

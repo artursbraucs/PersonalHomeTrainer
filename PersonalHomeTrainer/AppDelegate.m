@@ -17,9 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UITabBarController *tab = (UITabBarController *) self.window.rootViewController;
-    UINavigationController *nav = (UINavigationController *)[[tab viewControllers]objectAtIndex:0];
-    WorkoutViewController *wvc = (WorkoutViewController *)[[nav viewControllers]objectAtIndex:0];
-    wvc.managedObjectContext = self.managedObjectContext;
+    UINavigationController *nav = (UINavigationController *)[[tab viewControllers]objectAtIndex:1];
+    ExercicesTableViewController *etvc = (ExercicesTableViewController *)[[nav viewControllers]objectAtIndex:0];
+    etvc.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 
@@ -103,7 +103,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataTemplate.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PersonalHomeTrainer.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

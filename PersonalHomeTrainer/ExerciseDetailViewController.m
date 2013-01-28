@@ -7,7 +7,7 @@
 //
 
 #import "ExerciseDetailViewController.h"
-#import "Exercise.h"
+#import "OldExercise.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "LBYouTube.h"
 
@@ -36,7 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     [self configureView];
 }
 
@@ -46,7 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setExercise:(Exercise *)exercise
+- (void)setExercise:(OldExercise *)exercise
 {
     if (_exercise != exercise) {
         _exercise = exercise;

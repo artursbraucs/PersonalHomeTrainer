@@ -8,8 +8,7 @@
 
 #import "ExercicesTableViewController.h"
 #import "Exercise.h"
-#import "ExerciseDataController.h"
-#import "TrainerAddExerciseTableViewController.h"
+#import "AddExerciseTableViewController.h"
 #import "ExerciseDetailViewController.h"
 
 @interface ExercicesTableViewController ()
@@ -17,6 +16,26 @@
 @end
 
 @implementation ExercicesTableViewController
+
+@synthesize fetchedResultsController = _fetchedResultsController;
+
+- (void) addExerciseTableViewControllerDidCancel:(Exercise *)exerciseToDelete {
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context deleteObject:exerciseToDelete];
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void) addExerciseTableViewControllerDidSave {
+    NSManagedObjectContext *context = self.managedObjectContext;
+
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Error! %@", error);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,18 +49,18 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.dataController = [[ExerciseDataController alloc] init];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
+    NSError *error = nil;
+    if (![[self fetchedResultsController]performFetch:&error]) {
+        NSLog(@"Error! %@", error);
+        abort();
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,13 +73,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+    return [[self.fetchedResultsController sections] count];
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dataController countOfList];
+    id <NSFetchedResultsSectionInfo> secInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [secInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,11 +88,14 @@
     static NSString *CellIdentifier = @"ExcerciseCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Exercise *excercise = [self.dataController objectInListAtIndex:indexPath.row];
-    
+    Exercise *excercise = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [cell.textLabel setText: excercise.name];
-
+    
     return cell;
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[[self.fetchedResultsController sections]objectAtIndex:section]name];
 }
 
 // Override to support conditional editing of the table view.
@@ -83,25 +106,25 @@
 }
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 
 // Override to support conditional rearranging of the table view.
@@ -111,11 +134,31 @@
     return NO;
 }
 
+#pragma mark -
+#pragma mark Fetched Results Controller section
+- (NSFetchedResultsController *) fetchedResultsController {
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Exercise"
+                                              inManagedObjectContext:[self managedObjectContext]];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"type"
+                                                                   ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"type" cacheName:nil];
+    return _fetchedResultsController;
+}
+
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
+{
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -125,31 +168,17 @@
      */
 }
 
-- (void)cancel:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
-}
-
-- (void)done:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier]isEqualToString:@"SaveExercise"]) {
-        TrainerAddExerciseTableViewController *addController = [segue sourceViewController];
-        if (addController.trainerExercise) {
-            [self.dataController addTrainerExerciseWithExcercise:addController.trainerExercise];
-            [[self tableView] reloadData];
-        }
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([segue.identifier isEqualToString:@"ShowExerciseDetails"]) {
-        ExerciseDetailViewController *detailController = [segue destinationViewController];
-        detailController.exercise = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+
+    if ([segue.identifier isEqualToString:@"AddExercise"]) {
+        AddExerciseTableViewController *aetvc = (AddExerciseTableViewController *)[segue destinationViewController];
+        aetvc.delegate = self;
+        Exercise *newExercise = (Exercise *) [NSEntityDescription insertNewObjectForEntityForName:@"Exercise" inManagedObjectContext:[self managedObjectContext]];
+        aetvc.currentExercise = newExercise;
     }
+    if ([segue.identifier isEqualToString:@"ShowExerciseDetails"]) {
+    }
+
 }
 
 @end

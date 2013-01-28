@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "LBYouTube.h"
 
-@class Exercise;
+@class OldExercise;
 
 @interface ExerciseDetailViewController : UIViewController <LBYouTubePlayerControllerDelegate> {
     LBYouTubePlayerController* controller;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) Exercise *exercise;
+@property (strong, nonatomic) OldExercise *exercise;
 
 @property (nonatomic, strong) LBYouTubePlayerController* controller;
 

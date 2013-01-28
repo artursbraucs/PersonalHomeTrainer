@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Exercise.h"
+#import "OldExercise.h"
 
 @interface ExerciseDataController : NSObject
 
 @property (nonatomic, copy) NSMutableArray *masterTrainerExerciseList;
 
 - (NSUInteger)countOfList;
-- (Exercise *)objectInListAtIndex:(NSUInteger)theIndex;
-- (void)addTrainerExerciseWithExcercise:(Exercise *)exercise;
+- (OldExercise *)objectInListAtIndex:(NSUInteger)theIndex;
+- (void)addTrainerExerciseWithExcercise:(OldExercise *)exercise;
 @end
