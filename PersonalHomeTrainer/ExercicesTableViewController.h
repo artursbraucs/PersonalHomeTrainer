@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AddExerciseTableViewController.h"
 
-@interface ExercicesTableViewController : UITableViewController <AddExerciseTableViewControllerDelegate>
+@interface ExercicesTableViewController : UITableViewController <AddExerciseTableViewControllerDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

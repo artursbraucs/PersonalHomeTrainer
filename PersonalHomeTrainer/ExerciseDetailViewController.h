@@ -8,16 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "LBYouTube.h"
-
-@class OldExercise;
+#import "Exercise.h"
 
 @interface ExerciseDetailViewController : UIViewController <LBYouTubePlayerControllerDelegate> {
     LBYouTubePlayerController* controller;
 }
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) OldExercise *exercise;
+@property (nonatomic, strong) Exercise *currentExercise;
 
-@property (nonatomic, strong) LBYouTubePlayerController* controller;
+@property (weak, nonatomic) IBOutlet UITextView *textArea;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionsField;
+@property (weak, nonatomic) IBOutlet UITextField *typeField;
+@property (weak, nonatomic) IBOutlet UITextField *videoPathField;
+
+@property (nonatomic, strong) LBYouTubePlayerController* videoController;
 
 @end

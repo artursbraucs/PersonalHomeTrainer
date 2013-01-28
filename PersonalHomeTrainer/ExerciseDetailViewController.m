@@ -18,10 +18,10 @@
 
 @implementation ExerciseDetailViewController
 
-@synthesize controller;
+@synthesize videoController;
 
 - (void)dealloc {
-    self.controller.delegate = nil;
+    self.videoController.delegate = nil;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -46,35 +46,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setExercise:(OldExercise *)exercise
-{
-    if (_exercise != exercise) {
-        _exercise = exercise;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
-
 - (void)configureView
 {
-    if (self.exercise.description.length) {
-        self.nameLabel.text = self.exercise.description;
+    self.nameField.text = [self.currentExercise name];
+    self.typeField.text = [self.currentExercise type];
+    self.descriptionsField.text = [self.currentExercise descriptions];
+    self.videoPathField.text = [self.currentExercise videoPath];
+
+    if (self.currentExercise.description.length) {
+        self.textArea.text = [self.currentExercise descriptions];
     } else {
-        self.nameLabel.text = self.exercise.name;
+        self.textArea.text = [self.currentExercise name];
     }
-    if (self.exercise.videoPath.length) {
+    if (self.currentExercise.videoPath.length) {
         [self playVideo];
     }
 }
 
 - (void)playVideo {
-    self.controller = [[LBYouTubePlayerController alloc] initWithYouTubeURL:[NSURL URLWithString:self.exercise.videoPath] quality:LBYouTubeVideoQualityLarge];
-    self.controller.delegate = self;
+    self.videoController = [[LBYouTubePlayerController alloc] initWithYouTubeURL:[NSURL URLWithString:[self.currentExercise videoPath]] quality:LBYouTubeVideoQualityLarge];
+    self.videoController.delegate = self;
     
-    self.controller.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 300.0f);
-    self.controller.view.center = self.view.center;
-    [self.view addSubview:self.controller.view];
+    self.videoController.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 200.0f);
+    self.videoController.view.center = self.view.center;
+    [self.view addSubview:self.videoController.view];
 }
 
 #pragma mark -
