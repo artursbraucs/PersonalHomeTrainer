@@ -19,6 +19,24 @@
 
 @synthesize fetchedResultsController = _fetchedResultsController;
 
+- (void) addExerciseTableViewControllerDidCancel:(Exercise *)exerciseToDelete {
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context deleteObject:exerciseToDelete];
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void) addExerciseTableViewControllerDidSave {
+    NSManagedObjectContext *context = self.managedObjectContext;
+
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Error! %@", error);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -31,7 +49,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.dataController = [[ExerciseDataController alloc] init];
 }
 
 - (void)viewDidLoad
@@ -151,31 +168,17 @@
      */
 }
 
-- (void)cancel:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
-}
-
-- (void)done:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier]isEqualToString:@"SaveExercise"]) {
-        AddExerciseTableViewController *addController = [segue sourceViewController];
-        if (addController.trainerExercise) {
-            [self.dataController addTrainerExerciseWithExcercise:addController.trainerExercise];
-            [[self tableView] reloadData];
-        }
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([segue.identifier isEqualToString:@"ShowExerciseDetails"]) {
-        ExerciseDetailViewController *detailController = [segue destinationViewController];
-        detailController.exercise = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+
+    if ([segue.identifier isEqualToString:@"AddExercise"]) {
+        AddExerciseTableViewController *aetvc = (AddExerciseTableViewController *)[segue destinationViewController];
+        aetvc.delegate = self;
+        Exercise *newExercise = (Exercise *) [NSEntityDescription insertNewObjectForEntityForName:@"Exercise" inManagedObjectContext:[self managedObjectContext]];
+        aetvc.currentExercise = newExercise;
     }
+    if ([segue.identifier isEqualToString:@"ShowExerciseDetails"]) {
+    }
+
 }
 
 @end

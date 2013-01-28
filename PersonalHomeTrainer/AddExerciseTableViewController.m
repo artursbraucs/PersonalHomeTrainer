@@ -19,7 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.nameInput.text = self.currentExercise.name;
+    self.descriptionInput.text = self.currentExercise.descriptions;
+    self.videoPathInput.text = self.currentExercise.videoPath;
+    self.typeInput.text = self.currentExercise.type;
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,21 +32,22 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ((textField == self.nameInput) || (textField == self.descriptionInput) || (textField == self.videoPathInput)) {
+    if ((textField == self.nameInput) || (textField == self.descriptionInput) || (textField == self.videoPathInput) || (textField == self.typeInput)) {
         [textField resignFirstResponder];
     }
     return YES;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"SaveExercise"]) {
-        if ([self.nameInput.text length] || [self.descriptionInput.text length]) {
-            OldExercise *exercise;
-            NSDate *today = [NSDate date];
-            exercise = [[OldExercise alloc] initWithName:self.nameInput.text description:self.descriptionInput.text videoPath:self.videoPathInput.text date:today];
-            self.trainerExercise = exercise;
-        }
-    }
+- (IBAction)save:(id)sender {
+    [self.currentExercise setCreatedAt:[NSDate date]];
+    [self.currentExercise setName:self.nameInput.text];
+    [self.currentExercise setDescriptions:self.descriptionInput.text];
+    [self.currentExercise setVideoPath:self.videoPathInput.text];
+    [self.currentExercise setType:self.typeInput.text];
+    [self.delegate addExerciseTableViewControllerDidSave];
 }
 
+- (IBAction)cancel:(id)sender {
+    [self.delegate addExerciseTableViewControllerDidCancel:[self currentExercise]];
+}
 @end

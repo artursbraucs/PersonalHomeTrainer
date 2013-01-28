@@ -7,14 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
-@class OldExercise;
+#import "Exercise.h"
+
+@protocol AddExerciseTableViewControllerDelegate;
+
 
 @interface AddExerciseTableViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameInput;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionInput;
 @property (weak, nonatomic) IBOutlet UITextField *videoPathInput;
+@property (weak, nonatomic) IBOutlet UITextField *typeInput;
 
-@property (strong, nonatomic) OldExercise *trainerExercise;
+@property (nonatomic, weak) id <AddExerciseTableViewControllerDelegate> delegate;
 
+@property (strong, nonatomic) Exercise *currentExercise;
+
+- (IBAction)save:(id)sender;
+- (IBAction)cancel:(id)sender;
+
+@end
+
+@protocol AddExerciseTableViewControllerDelegate
+-(void)addExerciseTableViewControllerDidSave;
+-(void)addExerciseTableViewControllerDidCancel:(Exercise *)exerciseToDelete;
 @end

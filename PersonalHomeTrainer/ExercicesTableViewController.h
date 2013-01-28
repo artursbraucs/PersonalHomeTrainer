@@ -7,17 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ExerciseDataController.h"
+#import "AddExerciseTableViewController.h"
 
-@interface ExercicesTableViewController : UITableViewController
-
-@property (strong, nonatomic) ExerciseDataController *dataController;
+@interface ExercicesTableViewController : UITableViewController <AddExerciseTableViewControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-
-- (IBAction)done:(UIStoryboardSegue *)segue;
-- (IBAction)cancel:(UIStoryboardSegue *)segue;
 
 @end
