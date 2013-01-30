@@ -8,8 +8,6 @@
 
 #import "AddExerciseTableViewController.h"
 
-#import "OldExercise.h"
-
 @interface AddExerciseTableViewController ()
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "ExerciseDetailViewController.h"
-#import "OldExercise.h"
+#import "AppDelegate.h"
+#import "AddExerciseTableViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "LBYouTube.h"
 
@@ -48,11 +49,6 @@
 
 - (void)configureView
 {
-    self.nameField.text = [self.currentExercise name];
-    self.typeField.text = [self.currentExercise type];
-    self.descriptionsField.text = [self.currentExercise descriptions];
-    self.videoPathField.text = [self.currentExercise videoPath];
-
     if (self.currentExercise.description.length) {
         self.textArea.text = [self.currentExercise descriptions];
     } else {
@@ -71,6 +67,30 @@
     self.videoController.view.center = self.view.center;
     [self.view addSubview:self.videoController.view];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self.videoController stop];
+    self.videoController.delegate = nil;
+    if ([segue.identifier isEqualToString:@"EditExercise"]) {
+        AddExerciseTableViewController *aetvc = (AddExerciseTableViewController *)[segue destinationViewController];
+        aetvc.delegate = self;
+        aetvc.currentExercise = self.currentExercise;
+    }
+}
+
+#pragma mark -
+#pragma mark AddExerciseTableViewControllerDelegate
+-(void)addExerciseTableViewControllerDidSave {
+    AppDelegate *myApp = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    [myApp saveContext];
+    [self configureView];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)addExerciseTableViewControllerDidCancel:(Exercise *)exerciseToDelete {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 
 #pragma mark -
 #pragma mark LBYouTubePlayerViewControllerDelegate

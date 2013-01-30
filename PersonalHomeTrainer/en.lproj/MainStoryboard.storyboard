@@ -103,29 +103,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sj0-3I-VGL">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fqo-n8-1EW">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mrh-Jv-9oH">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-Z9-91w">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-vc-thB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-vc-thB">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="e69-eI-VfO"/>
+                                    <constraint firstAttribute="height" constant="200" id="88T-R6-rxw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -133,35 +117,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="WyD-vc-thB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4wm-yb-cMS"/>
-                            <constraint firstItem="sj0-3I-VGL" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A4T-jM-Ueq"/>
-                            <constraint firstAttribute="trailing" secondItem="Fqo-n8-1EW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="By9-f7-RN3"/>
-                            <constraint firstAttribute="trailing" secondItem="mrh-Jv-9oH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IUS-rf-av2"/>
-                            <constraint firstItem="Fqo-n8-1EW" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jl7-Li-CWd"/>
-                            <constraint firstItem="mrh-Jv-9oH" firstAttribute="top" secondItem="Fqo-n8-1EW" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="MJ3-oK-gmU"/>
-                            <constraint firstItem="wbB-Z9-91w" firstAttribute="top" secondItem="mrh-Jv-9oH" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="NaL-I7-0yt"/>
-                            <constraint firstItem="wbB-Z9-91w" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="V1a-1g-aZe"/>
-                            <constraint firstItem="mrh-Jv-9oH" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="czL-gh-vGE"/>
-                            <constraint firstAttribute="trailing" secondItem="wbB-Z9-91w" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hLD-qO-fH1"/>
-                            <constraint firstItem="sj0-3I-VGL" firstAttribute="top" secondItem="mnb-gj-SEu" secondAttribute="top" constant="20" symbolic="YES" type="default" id="koc-bj-7aQ"/>
-                            <constraint firstAttribute="trailing" secondItem="sj0-3I-VGL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="nue-oZ-Ifc"/>
-                            <constraint firstItem="WyD-vc-thB" firstAttribute="top" secondItem="mnb-gj-SEu" secondAttribute="top" constant="145" id="qFz-Qr-LZT"/>
-                            <constraint firstItem="Fqo-n8-1EW" firstAttribute="top" secondItem="sj0-3I-VGL" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="sWM-4m-uf9"/>
-                            <constraint firstItem="WyD-vc-thB" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yvk-CA-9cP"/>
+                            <constraint firstItem="WyD-vc-thB" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OcJ-Cg-sRB"/>
+                            <constraint firstAttribute="trailing" secondItem="WyD-vc-thB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g2i-6t-JRQ"/>
+                            <constraint firstItem="WyD-vc-thB" firstAttribute="top" secondItem="mnb-gj-SEu" secondAttribute="top" constant="6" id="oWe-pn-Asw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lk2-P9-EiM"/>
+                    <navigationItem key="navigationItem" id="lk2-P9-EiM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="deB-y4-Vae">
+                            <connections>
+                                <segue destination="Lxu-uR-Z6c" kind="modal" identifier="EditExercise" id="fXL-9R-HjO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="descriptionsField" destination="Fqo-n8-1EW" id="fF5-ul-pkw"/>
-                        <outlet property="nameField" destination="sj0-3I-VGL" id="f8U-0c-ERO"/>
                         <outlet property="textArea" destination="WyD-vc-thB" id="aVl-6I-Id4"/>
-                        <outlet property="typeField" destination="mrh-Jv-9oH" id="5lC-ay-h8d"/>
-                        <outlet property="videoPathField" destination="wbB-Z9-91w" id="NUI-S0-VV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzV-N1-9Mj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2225" y="180"/>
+            <point key="canvasLocation" x="2131" y="180"/>
         </scene>
         <!--Add Exercise Table View Controller - Add exercise-->
         <scene sceneID="nVR-5y-agy">
@@ -352,7 +326,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ce8-Rs-SAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kTI-RA-2NY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2186" y="-694"/>
+            <point key="canvasLocation" x="2131" y="-522"/>
         </scene>
         <!--Navigation Controller - Profile-->
         <scene sceneID="sQG-Im-nB4">
@@ -429,26 +403,42 @@
             </objects>
             <point key="canvasLocation" x="875" y="180"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ouG-P2-vcP">
-            <objects>
-                <viewController id="iEG-TL-I42" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="O3A-VF-Czc">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KlU-rE-7ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2617" y="350"/>
-        </scene>
     </scenes>
     <resources>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="AddExerciseTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddExerciseTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="descriptionInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="typeInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="videoPathInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ExercicesTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercicesTableViewController.h"/>
+        </class>
+        <class className="ExerciseDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textArea" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProfileViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
+        </class>
+        <class className="WorkoutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -456,5 +446,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="3bL-aF-cx8"/>
+        <segue reference="fXL-9R-HjO"/>
     </inferredMetricsTieBreakers>
 </document>

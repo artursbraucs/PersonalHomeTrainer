@@ -9,19 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "LBYouTube.h"
 #import "Exercise.h"
+#import "AddExerciseTableViewController.h"
 
-@interface ExerciseDetailViewController : UIViewController <LBYouTubePlayerControllerDelegate> {
+@interface ExerciseDetailViewController : UIViewController <LBYouTubePlayerControllerDelegate, AddExerciseTableViewControllerDelegate> {
     LBYouTubePlayerController* controller;
 }
 
 @property (nonatomic, strong) Exercise *currentExercise;
 
 @property (weak, nonatomic) IBOutlet UITextView *textArea;
-
-@property (weak, nonatomic) IBOutlet UITextField *nameField;
-@property (weak, nonatomic) IBOutlet UITextField *descriptionsField;
-@property (weak, nonatomic) IBOutlet UITextField *typeField;
-@property (weak, nonatomic) IBOutlet UITextField *videoPathField;
 
 @property (nonatomic, strong) LBYouTubePlayerController* videoController;
 

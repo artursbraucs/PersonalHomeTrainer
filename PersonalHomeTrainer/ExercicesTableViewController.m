@@ -19,24 +19,6 @@
 
 @synthesize fetchedResultsController = _fetchedResultsController;
 
-- (void) addExerciseTableViewControllerDidCancel:(Exercise *)exerciseToDelete {
-    NSManagedObjectContext *context = self.managedObjectContext;
-    [context deleteObject:exerciseToDelete];
-    
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (void) addExerciseTableViewControllerDidSave {
-    NSManagedObjectContext *context = self.managedObjectContext;
-    
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Error! %@", error);
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -208,6 +190,25 @@
     }
 }
 
+#pragma mark -
+#pragma mark AddExerciseTableViewControllerDelegate
+- (void) addExerciseTableViewControllerDidCancel:(Exercise *)exerciseToDelete {
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context deleteObject:exerciseToDelete];
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void) addExerciseTableViewControllerDidSave {
+    NSManagedObjectContext *context = self.managedObjectContext;
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Error! %@", error);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 #pragma mark - Table view delegate
 

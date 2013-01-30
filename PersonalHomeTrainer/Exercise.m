@@ -17,5 +17,9 @@
 @dynamic videoPath;
 @dynamic createdAt;
 
+-(void) awakeFromInsert {
+    [super awakeFromInsert];
+    self.createdAt = [NSDate date];
+}
 
 @end
