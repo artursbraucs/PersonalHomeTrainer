@@ -16,10 +16,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UITabBarController *tab = (UITabBarController *) self.window.rootViewController;
-    UINavigationController *nav = (UINavigationController *)[[tab viewControllers]objectAtIndex:1];
-    ExercicesTableViewController *etvc = (ExercicesTableViewController *)[[nav viewControllers]objectAtIndex:0];
-    etvc.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 

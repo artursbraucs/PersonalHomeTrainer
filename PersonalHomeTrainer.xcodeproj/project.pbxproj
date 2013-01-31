@@ -33,6 +33,8 @@
 		51E90E7716B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51E90E7516B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld */; };
 		7449776616A98C6E007B247A /* ExercicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776516A98C6E007B247A /* ExercicesTableViewController.m */; };
 		7449776A16A99329007B247A /* AddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776916A99329007B247A /* AddExerciseTableViewController.m */; };
+		74C74ECA16BA8A9400C05878 /* workout_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C74EC816BA8A9400C05878 /* workout_tab@2x.png */; };
+		74C74ECB16BA8A9400C05878 /* workout_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C74EC916BA8A9400C05878 /* workout_tab.png */; };
 		74CD360B16B147750037B56D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CD360A16B147750037B56D /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		7449776516A98C6E007B247A /* ExercicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercicesTableViewController.m; sourceTree = "<group>"; };
 		7449776816A99329007B247A /* AddExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseTableViewController.h; sourceTree = "<group>"; };
 		7449776916A99329007B247A /* AddExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseTableViewController.m; sourceTree = "<group>"; };
+		74C74EC816BA8A9400C05878 /* workout_tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "workout_tab@2x.png"; sourceTree = "<group>"; };
+		74C74EC916BA8A9400C05878 /* workout_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout_tab.png; sourceTree = "<group>"; };
 		74CD360A16B147750037B56D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,8 @@
 				5106492B168DC96400D75337 /* first.png */,
 				5106492D168DC96400D75337 /* first@2x.png */,
 				51064925168DC96400D75337 /* MainStoryboard.storyboard */,
+				74C74EC816BA8A9400C05878 /* workout_tab@2x.png */,
+				74C74EC916BA8A9400C05878 /* workout_tab.png */,
 				510649531691EAB100D75337 /* OldExercise.h */,
 				510649541691EAB100D75337 /* OldExercise.m */,
 				5106494E1691E57C00D75337 /* PersonalHomeTrainer.entitlements */,
@@ -248,6 +254,8 @@
 				5106492E168DC96400D75337 /* first@2x.png in Resources */,
 				51064933168DC96400D75337 /* second.png in Resources */,
 				51064935168DC96400D75337 /* second@2x.png in Resources */,
+				74C74ECA16BA8A9400C05878 /* workout_tab@2x.png in Resources */,
+				74C74ECB16BA8A9400C05878 /* workout_tab.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

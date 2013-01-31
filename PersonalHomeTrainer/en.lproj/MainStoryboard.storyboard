@@ -8,7 +8,7 @@
         <scene sceneID="3aE-vP-OF7">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Epu-hc-psK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workout" id="fCE-Jp-y56"/>
+                    <tabBarItem key="tabBarItem" title="Workout" image="workout_tab.png" id="fCE-Jp-y56"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NiK-MS-Q0J">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -109,17 +109,24 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="88T-R6-rxw"/>
+                                    <constraint firstAttribute="height" constant="191" id="ot1-UJ-MZ3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hm1-Ou-POC">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WyD-vc-thB" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OcJ-Cg-sRB"/>
-                            <constraint firstAttribute="trailing" secondItem="WyD-vc-thB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g2i-6t-JRQ"/>
-                            <constraint firstItem="WyD-vc-thB" firstAttribute="top" secondItem="mnb-gj-SEu" secondAttribute="top" constant="6" id="oWe-pn-Asw"/>
+                            <constraint firstAttribute="bottom" secondItem="hm1-Ou-POC" secondAttribute="bottom" constant="209" id="1XT-uT-aVZ"/>
+                            <constraint firstItem="hm1-Ou-POC" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" type="default" id="7Ng-p9-0wU"/>
+                            <constraint firstItem="hm1-Ou-POC" firstAttribute="trailing" secondItem="mnb-gj-SEu" secondAttribute="trailing" type="default" id="E75-Ej-cZY"/>
+                            <constraint firstItem="WyD-vc-thB" firstAttribute="leading" secondItem="mnb-gj-SEu" secondAttribute="leading" type="default" id="OaI-V9-ons"/>
+                            <constraint firstItem="hm1-Ou-POC" firstAttribute="top" secondItem="mnb-gj-SEu" secondAttribute="top" type="default" id="Tea-6X-nwe"/>
+                            <constraint firstItem="WyD-vc-thB" firstAttribute="bottom" secondItem="mnb-gj-SEu" secondAttribute="bottom" type="default" id="fVt-GH-lgu"/>
+                            <constraint firstItem="WyD-vc-thB" firstAttribute="trailing" secondItem="mnb-gj-SEu" secondAttribute="trailing" type="default" id="hHS-5X-Xfk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lk2-P9-EiM">
@@ -131,6 +138,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="textArea" destination="WyD-vc-thB" id="aVl-6I-Id4"/>
+                        <outlet property="videoPlaceholder" destination="hm1-Ou-POC" id="cZD-g6-NI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzV-N1-9Mj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -407,6 +415,7 @@
     <resources>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
+        <image name="workout_tab.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="AddExerciseTableViewController" superclassName="UITableViewController">
@@ -427,6 +436,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseDetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="textArea" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="videoPlaceholder" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

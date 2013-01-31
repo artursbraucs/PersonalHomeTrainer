@@ -18,6 +18,7 @@
 @property (nonatomic, strong) Exercise *currentExercise;
 
 @property (weak, nonatomic) IBOutlet UITextView *textArea;
+@property (weak, nonatomic) IBOutlet UIView *videoPlaceholder;
 
 @property (nonatomic, strong) LBYouTubePlayerController* videoController;
 

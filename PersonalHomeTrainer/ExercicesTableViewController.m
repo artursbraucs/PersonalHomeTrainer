@@ -7,6 +7,7 @@
 //
 
 #import "ExercicesTableViewController.h"
+#import "AppDelegate.h"
 #import "Exercise.h"
 #import "AddExerciseTableViewController.h"
 #import "ExerciseDetailViewController.h"
@@ -23,7 +24,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -121,6 +121,17 @@
     return NO;
 }
 */
+
+#pragma mark -
+#pragma mark Managed Object Context section
+- (NSManagedObjectContext *) managedObjectContext {
+    if (_managedObjectContext) {
+        return _managedObjectContext;
+    }
+    AppDelegate *myApp = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    _managedObjectContext = [myApp managedObjectContext];
+    return _managedObjectContext;
+}
 
 #pragma mark -
 #pragma mark Fetched Results Controller section

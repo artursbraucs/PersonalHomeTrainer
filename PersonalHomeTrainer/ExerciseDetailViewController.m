@@ -13,8 +13,8 @@
 #import "LBYouTube.h"
 
 @interface ExerciseDetailViewController ()
-- (void)configureView;
-- (void)playVideo;
+- (void)setTextAreaContent;
+- (void)iniVideo;
 @end
 
 @implementation ExerciseDetailViewController
@@ -33,6 +33,14 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.videoController != nil){
+        [self.videoController play];
+    } else {
+        [self iniVideo];
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -46,7 +54,7 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    [self configureView];
+    [self setTextAreaContent];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,25 +63,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)configureView
+- (void)setTextAreaContent
 {
     if (self.currentExercise.description.length) {
         self.textArea.text = [self.currentExercise descriptions];
     } else {
         self.textArea.text = [self.currentExercise name];
     }
-    if (self.currentExercise.videoPath.length) {
-        [self playVideo];
-    }
 }
 
-- (void)playVideo {
-    self.videoController = [[LBYouTubePlayerController alloc] initWithYouTubeURL:[NSURL URLWithString:[self.currentExercise videoPath]] quality:LBYouTubeVideoQualityLarge];
-    self.videoController.delegate = self;
-    
-    self.videoController.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 200.0f);
-    self.videoController.view.center = self.view.center;
-    [self.view addSubview:self.videoController.view];
+- (void)iniVideo {
+    if (self.videoController != nil) {
+        [self.videoController.view removeFromSuperview];
+        self.videoController.delegate = nil;
+        self.videoController = nil;
+    }
+    if (self.currentExercise.videoPath.length) {
+        self.videoController = [[LBYouTubePlayerController alloc] initWithYouTubeURL:[NSURL URLWithString:[self.currentExercise videoPath]] quality:LBYouTubeVideoQualityLarge];
+        self.videoController.delegate = self;
+        
+        self.videoController.view.frame = [self.videoPlaceholder bounds]; // CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 200.0f);
+        self.videoController.view.center = [self.videoPlaceholder center]; // CGPointMake(200.0f, 300.0f); //
+        [self.view addSubview:self.videoController.view];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -91,7 +103,8 @@
 -(void)addExerciseTableViewControllerDidSave {
     AppDelegate *myApp = (AppDelegate *) [[UIApplication sharedApplication]delegate];
     [myApp saveContext];
-    [self configureView];
+    [self setTextAreaContent];
+    [self iniVideo];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
