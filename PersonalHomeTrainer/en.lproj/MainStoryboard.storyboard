@@ -8,7 +8,7 @@
         <scene sceneID="3aE-vP-OF7">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Epu-hc-psK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workout" image="workout_tab.png" id="fCE-Jp-y56"/>
+                    <tabBarItem key="tabBarItem" title="Workout" image="whistle.png" id="fCE-Jp-y56"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NiK-MS-Q0J">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -340,7 +340,7 @@
         <scene sceneID="sQG-Im-nB4">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ZU9-qD-uMg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="PF6-oQ-Cfr"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="man.png" id="PF6-oQ-Cfr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bhe-we-2dy">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -392,7 +392,7 @@
         <scene sceneID="FJk-dd-ay5">
             <objects>
                 <navigationController id="FIM-rg-kcS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exercises" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="dumbbell.png" id="7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z7R-aa-p57">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -413,9 +413,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
+        <image name="dumbbell.png" width="30" height="30"/>
+        <image name="man.png" width="30" height="30"/>
         <image name="second" width="16" height="16"/>
-        <image name="workout_tab.png" width="30" height="30"/>
+        <image name="whistle.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="AddExerciseTableViewController" superclassName="UITableViewController">
