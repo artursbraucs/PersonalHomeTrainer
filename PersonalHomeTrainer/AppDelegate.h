@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ExercicesTableViewController.h"
-#import "WorkoutViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
