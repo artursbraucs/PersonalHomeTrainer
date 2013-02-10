@@ -30,6 +30,8 @@
 		519B8D0116C6C40800DF7766 /* WorkoutsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B8D0016C6C40800DF7766 /* WorkoutsTableViewController.m */; };
 		519B8D0416C6C80100DF7766 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B8D0316C6C80100DF7766 /* Workout.m */; };
 		519B8D0716C6C9FC00DF7766 /* WorkoutExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B8D0616C6C9FC00DF7766 /* WorkoutExercise.m */; };
+		519B8D0A16C7DA8F00DF7766 /* WorkoutExercisesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B8D0916C7DA8F00DF7766 /* WorkoutExercisesTableViewController.m */; };
+		519B8D0D16C80DCD00DF7766 /* AddWorkoutExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B8D0C16C80DCD00DF7766 /* AddWorkoutExerciseTableViewController.m */; };
 		51E90E7716B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51E90E7516B3F36800BD377A /* PersonalHomeTrainer.xcdatamodeld */; };
 		7449776616A98C6E007B247A /* ExercicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776516A98C6E007B247A /* ExercicesTableViewController.m */; };
 		7449776A16A99329007B247A /* AddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449776916A99329007B247A /* AddExerciseTableViewController.m */; };
@@ -79,6 +81,10 @@
 		519B8D0316C6C80100DF7766 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
 		519B8D0516C6C9FC00DF7766 /* WorkoutExercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutExercise.h; sourceTree = "<group>"; };
 		519B8D0616C6C9FC00DF7766 /* WorkoutExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutExercise.m; sourceTree = "<group>"; };
+		519B8D0816C7DA8E00DF7766 /* WorkoutExercisesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutExercisesTableViewController.h; sourceTree = "<group>"; };
+		519B8D0916C7DA8F00DF7766 /* WorkoutExercisesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutExercisesTableViewController.m; sourceTree = "<group>"; };
+		519B8D0B16C80DCD00DF7766 /* AddWorkoutExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkoutExerciseTableViewController.h; sourceTree = "<group>"; };
+		519B8D0C16C80DCD00DF7766 /* AddWorkoutExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkoutExerciseTableViewController.m; sourceTree = "<group>"; };
 		51E90E7616B3F36800BD377A /* CoreDataTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTemplate.xcdatamodel; sourceTree = "<group>"; };
 		7449776416A98C6E007B247A /* ExercicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercicesTableViewController.h; sourceTree = "<group>"; };
 		7449776516A98C6E007B247A /* ExercicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercicesTableViewController.m; sourceTree = "<group>"; };
@@ -157,6 +163,10 @@
 				5106492B168DC96400D75337 /* first.png */,
 				5106492D168DC96400D75337 /* first@2x.png */,
 				51064925168DC96400D75337 /* MainStoryboard.storyboard */,
+				519B8D0B16C80DCD00DF7766 /* AddWorkoutExerciseTableViewController.h */,
+				519B8D0C16C80DCD00DF7766 /* AddWorkoutExerciseTableViewController.m */,
+				519B8D0816C7DA8E00DF7766 /* WorkoutExercisesTableViewController.h */,
+				519B8D0916C7DA8F00DF7766 /* WorkoutExercisesTableViewController.m */,
 				519B8CFF16C6C40800DF7766 /* WorkoutsTableViewController.h */,
 				519B8D0016C6C40800DF7766 /* WorkoutsTableViewController.m */,
 				74C74EC816BA8A9400C05878 /* workout_tab@2x.png */,
@@ -291,6 +301,8 @@
 				519B8D0116C6C40800DF7766 /* WorkoutsTableViewController.m in Sources */,
 				519B8D0416C6C80100DF7766 /* Workout.m in Sources */,
 				519B8D0716C6C9FC00DF7766 /* WorkoutExercise.m in Sources */,
+				519B8D0A16C7DA8F00DF7766 /* WorkoutExercisesTableViewController.m in Sources */,
+				519B8D0D16C80DCD00DF7766 /* AddWorkoutExerciseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

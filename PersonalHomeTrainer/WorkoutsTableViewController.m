@@ -9,8 +9,12 @@
 #import "WorkoutsTableViewController.h"
 #import "AppDelegate.h"
 #import "Workout.h"
+#import "WorkoutExercisesTableViewController.h"
+#import <objc/runtime.h>
 
 @interface WorkoutsTableViewController ()
+
+@property (nonatomic, weak) UIAlertView *inputAlert;
 
 @end
 
@@ -124,6 +128,28 @@
 }
 
 #pragma mark -
+#pragma mark Actions
+- (void) addClicked:(id)sender
+{
+    UIAlertView *inputAlert = [[UIAlertView alloc] initWithTitle:@"New workout" message:@"Write name" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
+    [inputAlert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [inputAlert show];    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        UITextField *nameInput = [alertView textFieldAtIndex:0];
+        Workout *newWorkout = (Workout *) [NSEntityDescription insertNewObjectForEntityForName:@"Workout" inManagedObjectContext:[self managedObjectContext]];
+        
+        newWorkout.name = [nameInput text];
+        
+        AppDelegate *myApp = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+        [myApp saveContext];
+    }
+}
+
+#pragma mark -
 #pragma mark Managed Object Context section
 - (NSManagedObjectContext *) managedObjectContext {
     if (_managedObjectContext) {
@@ -199,6 +225,18 @@
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"EditWorkout"]) {
+        WorkoutExercisesTableViewController *wetvc = (WorkoutExercisesTableViewController *)[segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        Workout *selectedWorkout = (Workout *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+
+        [wetvc setCurrentWorkout:selectedWorkout];
     }
 }
 
